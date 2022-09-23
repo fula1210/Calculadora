@@ -4,15 +4,14 @@
  */
 package vista;
 
-/**
- *
- * @author Usuario
- */
+import javax.swing.JOptionPane;
+
 public class aparato extends javax.swing.JFrame {
 
-    /**
-     * Creates new form aparato
-     */
+    int dato1;
+    int dato2;
+    String operador;
+    
     public aparato() {
         initComponents();
     }
@@ -33,10 +32,16 @@ public class aparato extends javax.swing.JFrame {
         jBdivi = new javax.swing.JButton();
         jBn1 = new javax.swing.JButton();
         jBn2 = new javax.swing.JButton();
+        jBigual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jBsuma.setText("+");
+        jBsuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBsumaActionPerformed(evt);
+            }
+        });
 
         jBresta.setText("-");
 
@@ -45,8 +50,26 @@ public class aparato extends javax.swing.JFrame {
         jBdivi.setText("/");
 
         jBn1.setText("1");
+        jBn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBn1ActionPerformed(evt);
+            }
+        });
 
         jBn2.setText("3");
+        jBn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBn2ActionPerformed(evt);
+            }
+        });
+
+        jBigual.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
+        jBigual.setText("=");
+        jBigual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBigualActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -73,6 +96,10 @@ public class aparato extends javax.swing.JFrame {
                                     .addComponent(jBmulti)
                                     .addComponent(jBdivi))))
                         .addGap(32, 32, 32))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addComponent(jBigual, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -88,17 +115,41 @@ public class aparato extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jBn1)
                             .addComponent(jBn2))))
-                .addGap(21, 21, 21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBresta)
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBmulti)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jBdivi)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jBigual)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBn1ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"1");
+    }//GEN-LAST:event_jBn1ActionPerformed
+
+    private void jBn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBn2ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"3");
+    }//GEN-LAST:event_jBn2ActionPerformed
+
+    private void jBsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsumaActionPerformed
+        this.dato1= Integer.parseInt(this.jTFpantalla.getText());
+        this.operador ="+";
+        this.jTFpantalla.setText("");
+    }//GEN-LAST:event_jBsumaActionPerformed
+
+    private void jBigualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBigualActionPerformed
+        this.dato2=Integer.parseInt(this.jTFpantalla.getText());
+        
+        switch(this.operador){
+            case "+": JOptionPane.showMessageDialog(rootPane, dato1 + dato2);
+        }
+    }//GEN-LAST:event_jBigualActionPerformed
 
     /**
      * @param args the command line arguments
@@ -137,6 +188,7 @@ public class aparato extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBdivi;
+    private javax.swing.JButton jBigual;
     private javax.swing.JButton jBmulti;
     private javax.swing.JButton jBn1;
     private javax.swing.JButton jBn2;
