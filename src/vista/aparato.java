@@ -8,9 +8,13 @@ import javax.swing.JOptionPane;
 
 public class aparato extends javax.swing.JFrame {
 
-    int dato1;
-    int dato2;
-    String operador;
+    //int dato1;
+    // int dato2;
+    //String operador;
+    
+    public float dato1;
+    public float dato2;
+    public String operator;
     
     public aparato() {
         initComponents();
@@ -35,6 +39,12 @@ public class aparato extends javax.swing.JFrame {
         jBigual = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jTFpantalla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFpantallaActionPerformed(evt);
+            }
+        });
 
         jBsuma.setText("+");
         jBsuma.addActionListener(new java.awt.event.ActionListener() {
@@ -130,61 +140,80 @@ public class aparato extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBn1ActionPerformed
-        this.jTFpantalla.setText(this.jTFpantalla.getText()+"1");
+         this.jTFpantalla.setText(this.jTFpantalla.getText()+"1");
     }//GEN-LAST:event_jBn1ActionPerformed
 
     private void jBn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBn2ActionPerformed
-        this.jTFpantalla.setText(this.jTFpantalla.getText()+"3");
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"2");
     }//GEN-LAST:event_jBn2ActionPerformed
 
     private void jBsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsumaActionPerformed
-        this.dato1= Integer.parseInt(this.jTFpantalla.getText());
-        this.operador ="+";
+        this.dato1= Float.parseFloat(this.jTFpantalla.getText());
+        this.operator ="+";
         this.jTFpantalla.setText("");
     }//GEN-LAST:event_jBsumaActionPerformed
 
     private void jBigualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBigualActionPerformed
-        this.dato2=Integer.parseInt(this.jTFpantalla.getText());
+        this.dato2=Float.parseFloat(this.jTFpantalla.getText());
         
-        switch(this.operador){
-            case "+": JOptionPane.showMessageDialog(rootPane, dato1 + dato2);
+        switch(this.operator){
+            case "+":this.jTFpantalla.setText(sinpunto(this.dato1+this.dato2)); break;
+            case "-":this.jTFpantalla.setText(sinpunto(this.dato1-this.dato2)); break;
+            case "*":this.jTFpantalla.setText(sinpunto(this.dato1*this.dato2)); break;
+            case "/":this.jTFpantalla.setText(sinpunto(this.dato1/this.dato2)); break;
         }
     }//GEN-LAST:event_jBigualActionPerformed
 
+    private void jTFpantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFpantallaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFpantallaActionPerformed
+
+    
+    public String sinpunto(float validar){
+        String validacion="";
+        validacion=Float.toString(validar);
+        
+        if (validar %1==0){
+            validacion=validacion.substring(0, validacion.length()-2);
+        }
+        return validacion;
+        
+    }
+    
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new aparato().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new aparato().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBdivi;
