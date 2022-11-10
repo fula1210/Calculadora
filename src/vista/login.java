@@ -64,7 +64,11 @@ public class login extends javax.swing.JFrame {
         jLPass.setForeground(new java.awt.Color(255, 255, 255));
         jLPass.setText("Password");
 
-        jPFpass.setText("jPasswordField1");
+        jTFusuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jTFusuarioMouseExited(evt);
+            }
+        });
 
         jLtitulo.setFont(new java.awt.Font("Consolas", 1, 24)); // NOI18N
         jLtitulo.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,58 +147,83 @@ public class login extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
 
+
     private void jBingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBingresoActionPerformed
         String usuario = jTFusuario.getText(); // obtener informacion ingresada del campo
         String pass = jPFpass.getText(); // obtener informacion ingresada del pass 
-        
-        if (usuario.isEmpty() || pass.isEmpty()){
+
+        if (usuario.isEmpty() || pass.isEmpty()) {
             JOptionPane.showInternalMessageDialog(null, "campos vacios");
-        }else {
-            if (usuario.equals("usuario1") && pass.equals("1234")){
+            jTFusuario.setText(null);
+            jPFpass.setText(null);
+        } else {
+            if (!jTFusuario.getText().contains("@")) {
+                JOptionPane.showMessageDialog(null, "falta ingresar el  @");
+                //System.out.println("falta ingresar el  @");
+                                                        
+            //jTFusuario.setText(null);
+            jPFpass.setText(null);
+            }
+            else{
+                if (usuario.equals("usuario1@") && pass.equals("1234")){
+                  
                 JOptionPane.showMessageDialog(null, "Bienvenido a la calculadora");
                 aparato in = new aparato(); // creacion instancia
+                
                 in.setVisible(true); // envio a nueva ventana 
+                //ProductosController vis = new ProductosController():
                 this.dispose();
-            }else {
-                JOptionPane.showMessageDialog(null, "algun campo incorrecto");
+                }
+            
+                else {
+                    JOptionPane.showMessageDialog(null, "algun campo incorrecto");
+                    jTFusuario.setText(null);
+                    jPFpass.setText(null);
+                    }
+                }
             }
-        }
     }//GEN-LAST:event_jBingresoActionPerformed
+
+        
+        
+    private void jTFusuarioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTFusuarioMouseExited
+
+    }//GEN-LAST:event_jTFusuarioMouseExited
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new login().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new login().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBingreso;

@@ -18,6 +18,7 @@ public class aparato extends javax.swing.JFrame {
     
     public aparato() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -34,12 +35,25 @@ public class aparato extends javax.swing.JFrame {
         jBresta = new javax.swing.JButton();
         jBmulti = new javax.swing.JButton();
         jBdivi = new javax.swing.JButton();
-        jBn1 = new javax.swing.JButton();
-        jBn2 = new javax.swing.JButton();
+        jB1 = new javax.swing.JButton();
+        jB2 = new javax.swing.JButton();
+        jB3 = new javax.swing.JButton();
+        jB4 = new javax.swing.JButton();
+        jB5 = new javax.swing.JButton();
+        jB6 = new javax.swing.JButton();
+        jB7 = new javax.swing.JButton();
+        jB8 = new javax.swing.JButton();
+        jB9 = new javax.swing.JButton();
+        jB0 = new javax.swing.JButton();
+        jBpunto = new javax.swing.JButton();
+        jBlimpiar = new javax.swing.JButton();
         jBigual = new javax.swing.JButton();
+        jBsalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
+        jTFpantalla.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTFpantalla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTFpantallaActionPerformed(evt);
@@ -54,22 +68,109 @@ public class aparato extends javax.swing.JFrame {
         });
 
         jBresta.setText("-");
-
-        jBmulti.setText("*");
-
-        jBdivi.setText("/");
-
-        jBn1.setText("1");
-        jBn1.addActionListener(new java.awt.event.ActionListener() {
+        jBresta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBn1ActionPerformed(evt);
+                jBrestaActionPerformed(evt);
             }
         });
 
-        jBn2.setText("3");
-        jBn2.addActionListener(new java.awt.event.ActionListener() {
+        jBmulti.setText("*");
+        jBmulti.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBn2ActionPerformed(evt);
+                jBmultiActionPerformed(evt);
+            }
+        });
+
+        jBdivi.setText("/");
+        jBdivi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBdiviActionPerformed(evt);
+            }
+        });
+
+        jB1.setText("1");
+        jB1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jB1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        jB1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB1ActionPerformed(evt);
+            }
+        });
+
+        jB2.setText("2");
+        jB2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB2ActionPerformed(evt);
+            }
+        });
+
+        jB3.setText("3");
+        jB3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB3ActionPerformed(evt);
+            }
+        });
+
+        jB4.setText("4");
+        jB4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB4ActionPerformed(evt);
+            }
+        });
+
+        jB5.setText("5");
+        jB5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB5ActionPerformed(evt);
+            }
+        });
+
+        jB6.setText("6");
+        jB6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB6ActionPerformed(evt);
+            }
+        });
+
+        jB7.setText("7");
+        jB7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB7ActionPerformed(evt);
+            }
+        });
+
+        jB8.setText("8");
+        jB8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB8ActionPerformed(evt);
+            }
+        });
+
+        jB9.setText("9");
+        jB9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB9ActionPerformed(evt);
+            }
+        });
+
+        jB0.setText("0");
+        jB0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jB0ActionPerformed(evt);
+            }
+        });
+
+        jBpunto.setText(".");
+        jBpunto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBpuntoActionPerformed(evt);
+            }
+        });
+
+        jBlimpiar.setText("c");
+        jBlimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBlimpiarActionPerformed(evt);
             }
         });
 
@@ -81,71 +182,118 @@ public class aparato extends javax.swing.JFrame {
             }
         });
 
+        jBsalir.setText("SALIR");
+        jBsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBsalirActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTFpantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(59, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jBn1)
-                                .addGap(40, 40, 40)
-                                .addComponent(jBn2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jBsuma))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jBresta)
-                                    .addComponent(jBmulti)
-                                    .addComponent(jBdivi))))
-                        .addGap(32, 32, 32))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(143, 143, 143)
-                .addComponent(jBigual, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jB4)
+                                            .addComponent(jB7)
+                                            .addComponent(jB0))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jB5)
+                                            .addComponent(jB8)
+                                            .addComponent(jBpunto)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jB1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(jB2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jB3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jB6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jB9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(jBlimpiar))))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jBresta)
+                                        .addComponent(jBmulti)
+                                        .addComponent(jBdivi))
+                                    .addComponent(jBsuma)))
+                            .addComponent(jTFpantalla))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jBigual, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jBsalir, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jTFpantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(jBsuma))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jBn1)
-                            .addComponent(jBn2))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBresta)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBmulti)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBdivi)
+                            .addComponent(jB1)
+                            .addComponent(jB2)
+                            .addComponent(jB3))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jB4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jB7)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jB0))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jB5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jB8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jBpunto))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jB6)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jB9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jBlimpiar))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jBsuma)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBresta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBmulti)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBdivi)))
                 .addGap(18, 18, 18)
-                .addComponent(jBigual)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jBigual)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jBsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBn1ActionPerformed
+    private void jB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB1ActionPerformed
          this.jTFpantalla.setText(this.jTFpantalla.getText()+"1");
-    }//GEN-LAST:event_jBn1ActionPerformed
+    }//GEN-LAST:event_jB1ActionPerformed
 
-    private void jBn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBn2ActionPerformed
+    private void jB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB2ActionPerformed
         this.jTFpantalla.setText(this.jTFpantalla.getText()+"2");
-    }//GEN-LAST:event_jBn2ActionPerformed
+    }//GEN-LAST:event_jB2ActionPerformed
 
     private void jBsumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsumaActionPerformed
         this.dato1= Float.parseFloat(this.jTFpantalla.getText());
@@ -160,13 +308,84 @@ public class aparato extends javax.swing.JFrame {
             case "+":this.jTFpantalla.setText(sinpunto(this.dato1+this.dato2)); break;
             case "-":this.jTFpantalla.setText(sinpunto(this.dato1-this.dato2)); break;
             case "*":this.jTFpantalla.setText(sinpunto(this.dato1*this.dato2)); break;
-            case "/":this.jTFpantalla.setText(sinpunto(this.dato1/this.dato2)); break;
+            case "/":if(this.dato2==0){this.jTFpantalla.setText("ERROR");}
+            else{this.jTFpantalla.setText(sinpunto(this.dato1/this.dato2));} break;
         }
     }//GEN-LAST:event_jBigualActionPerformed
-
+    
     private void jTFpantallaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFpantallaActionPerformed
         // TODO add your handling code here:
+        jTFpantalla.setEditable(false);
     }//GEN-LAST:event_jTFpantallaActionPerformed
+
+    private void jB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB4ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"4");
+    }//GEN-LAST:event_jB4ActionPerformed
+
+    private void jB7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB7ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"7");
+    }//GEN-LAST:event_jB7ActionPerformed
+
+    private void jB0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB0ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"0");
+    }//GEN-LAST:event_jB0ActionPerformed
+
+    private void jB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB5ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"5");
+    }//GEN-LAST:event_jB5ActionPerformed
+
+    private void jB8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB8ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"8");
+    }//GEN-LAST:event_jB8ActionPerformed
+//*
+    private void jBpuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBpuntoActionPerformed
+        
+        if(!jTFpantalla.getText().contains(".")){
+            this.jTFpantalla.setText(this.jTFpantalla.getText()+".");
+        }
+    }//GEN-LAST:event_jBpuntoActionPerformed
+
+    private void jB6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB6ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"6");
+    }//GEN-LAST:event_jB6ActionPerformed
+
+    private void jB9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB9ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"9");
+    }//GEN-LAST:event_jB9ActionPerformed
+
+    private void jBlimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBlimpiarActionPerformed
+        
+        jTFpantalla.setText(null);
+        this.dato1 = 0;
+        this.dato2 = 0;
+                
+    }//GEN-LAST:event_jBlimpiarActionPerformed
+
+    private void jB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jB3ActionPerformed
+        this.jTFpantalla.setText(this.jTFpantalla.getText()+"3");
+    }//GEN-LAST:event_jB3ActionPerformed
+
+    private void jBrestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBrestaActionPerformed
+        this.dato1= Float.parseFloat(this.jTFpantalla.getText());
+        this.operator ="-";
+        this.jTFpantalla.setText("");
+    }//GEN-LAST:event_jBrestaActionPerformed
+
+    private void jBmultiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBmultiActionPerformed
+        this.dato1= Float.parseFloat(this.jTFpantalla.getText());
+        this.operator ="*";
+        this.jTFpantalla.setText("");
+    }//GEN-LAST:event_jBmultiActionPerformed
+
+    private void jBdiviActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBdiviActionPerformed
+        this.dato1= Float.parseFloat(this.jTFpantalla.getText());
+        this.operator ="/";
+        this.jTFpantalla.setText("");
+    }//GEN-LAST:event_jBdiviActionPerformed
+
+    private void jBsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBsalirActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jBsalirActionPerformed
 
     
     public String sinpunto(float validar){
@@ -183,45 +402,56 @@ public class aparato extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-//         */
-//        try {
-//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-//                if ("Nimbus".equals(info.getName())) {
-//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-//                    break;
-//                }
-//            }
-//        } catch (ClassNotFoundException ex) {
-//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (InstantiationException ex) {
-//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (IllegalAccessException ex) {
-//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-//            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-//        }
-//        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new aparato().setVisible(true);
-//            }
-//        });
-//    }
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(aparato.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new aparato().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jB0;
+    private javax.swing.JButton jB1;
+    private javax.swing.JButton jB2;
+    private javax.swing.JButton jB3;
+    private javax.swing.JButton jB4;
+    private javax.swing.JButton jB5;
+    private javax.swing.JButton jB6;
+    private javax.swing.JButton jB7;
+    private javax.swing.JButton jB8;
+    private javax.swing.JButton jB9;
     private javax.swing.JButton jBdivi;
     private javax.swing.JButton jBigual;
+    private javax.swing.JButton jBlimpiar;
     private javax.swing.JButton jBmulti;
-    private javax.swing.JButton jBn1;
-    private javax.swing.JButton jBn2;
+    private javax.swing.JButton jBpunto;
     private javax.swing.JButton jBresta;
+    private javax.swing.JButton jBsalir;
     private javax.swing.JButton jBsuma;
     private javax.swing.JTextField jTFpantalla;
     // End of variables declaration//GEN-END:variables
